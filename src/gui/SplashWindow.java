@@ -75,7 +75,7 @@ public class SplashWindow extends javax.swing.JFrame {
 
     private void loadingAnimation() {
         Thread t = new Thread(
-                new Runnable() {
+             new Runnable() {
             @Override
             public void run() {
                 for (int i = 0; i <= 100; i++) {
@@ -85,6 +85,7 @@ public class SplashWindow extends javax.swing.JFrame {
             }
         }
         );
+        t.start();
 
     }
 
