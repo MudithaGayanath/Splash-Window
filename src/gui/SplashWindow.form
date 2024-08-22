@@ -46,7 +46,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jProgressBar1" pref="530" max="32767" attributes="0"/>
+                  <Component id="loadingProBar" pref="530" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -55,14 +55,14 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace pref="243" max="32767" attributes="0"/>
-                  <Component id="jProgressBar1" min="-2" pref="12" max="-2" attributes="0"/>
+                  <Component id="loadingProBar" min="-2" pref="12" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JProgressBar" name="jProgressBar1">
+        <Component class="javax.swing.JProgressBar" name="loadingProBar">
           <Properties>
             <Property name="stringPainted" type="boolean" value="true"/>
           </Properties>
