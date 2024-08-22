@@ -80,7 +80,11 @@ public class SplashWindow extends javax.swing.JFrame {
             public void run() {
                 for (int i = 0; i <= 100; i++) {
                     loadingProBar.setValue(i);
-
+                    try {
+                        Thread.sleep(50);
+                    } catch (InterruptedException ex) {
+                    
+                    }
                 }
             }
         }
