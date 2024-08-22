@@ -17,7 +17,7 @@ public class SplashWindow extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         loadingProBar = new javax.swing.JProgressBar();
-        jLabel1 = new javax.swing.JLabel();
+        loadingLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("FlatLaf Custome UI");
@@ -26,8 +26,8 @@ public class SplashWindow extends javax.swing.JFrame {
 
         loadingProBar.setStringPainted(true);
 
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel1.setText("Loading...");
+        loadingLabel.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        loadingLabel.setText("Loading...");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -37,14 +37,14 @@ public class SplashWindow extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(loadingProBar, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(loadingLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(215, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(loadingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(loadingProBar, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -77,8 +77,8 @@ public class SplashWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel loadingLabel;
     private javax.swing.JProgressBar loadingProBar;
     // End of variables declaration//GEN-END:variables
 
@@ -88,6 +88,21 @@ public class SplashWindow extends javax.swing.JFrame {
             @Override
             public void run() {
                 for (int i = 0; i <= 100; i++) {
+                    
+                    if ( i == 20){
+                        loadingLabel.setText("Please Wait...");
+                    }else if( i == 40){
+                         loadingLabel.setText("Libraries Loading...");
+                    }else if ( i == 60){
+                        loadingLabel.setText("Creating Database Connection...");
+                    }else if ( i == 80){
+                        loadingLabel.setText("UI Genarated Successfully...");
+                    }else if ( i == 90){
+                        loadingLabel.setText("Creating Database Connection Successfully...");
+                    }else if ( i == 100){
+                        loadingLabel.setText("Done...");
+                    }
+                    
                     loadingProBar.setValue(i);
                     try {
                         Thread.sleep(50);
