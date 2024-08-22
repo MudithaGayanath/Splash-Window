@@ -73,19 +73,19 @@ public class SplashWindow extends javax.swing.JFrame {
     private javax.swing.JProgressBar loadingProBar;
     // End of variables declaration//GEN-END:variables
 
-    private void loadingAnimation(){
+    private void loadingAnimation() {
         Thread t = new Thread(
-        new Runnable() {
+                new Runnable() {
             @Override
             public void run() {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                for (int i = 0; i <= 100; i++) {
+                    loadingProBar.setValue(i);
+
+                }
             }
         }
         );
-        for (int i = 0; i <= 100; i++) {
-            loadingProBar.setValue(i);
-         
-        }
+
     }
-        
+
 }
