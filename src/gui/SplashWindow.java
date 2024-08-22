@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 
 public class SplashWindow extends javax.swing.JFrame {
 
+    
     public SplashWindow() {
         initComponents();
         loadingAnimation();
@@ -24,7 +25,7 @@ public class SplashWindow extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        loadingProBar.setStringPainted(true);
+        loadingProBar.setForeground(new java.awt.Color(102, 255, 102));
 
         loadingLabel.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         loadingLabel.setText("Loading...");
@@ -110,11 +111,19 @@ public class SplashWindow extends javax.swing.JFrame {
                     
                     }
                 }
+                
+                new SingInWindow().setVisible(true);
+                claer();
+                
             }
         }
         );
         t.start();
+        
 
+    }
+    private void claer(){
+        this.dispose();
     }
 
 }
